@@ -37,3 +37,12 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+Route::get('/admin/blogs', [App\Http\Controllers\BlogController::class, 'index']);
+Route::get('/admin/blog/delete/{id?}', [App\Http\Controllers\BlogController::class, 'delete']);
+Route::get('/admin/blog/create', [App\Http\Controllers\BlogController::class, 'create']);
+Route::post('/admin/blog/create', [App\Http\Controllers\BlogController::class, 'create']);
+Route::get('/admin/blog/update/{id?}', [App\Http\Controllers\BlogController::class, 'update']);
+Route::post('/admin/blog/update/{id?}', [App\Http\Controllers\BlogController::class, 'update']);

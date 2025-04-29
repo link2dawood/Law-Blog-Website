@@ -766,8 +766,6 @@ html [type=button] {
               </div>
             </a>
             <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-              <a href="{{url('user/profile')}}" class="dropdown-item">Profile</a>
-              <a href="{{url('user/settings')}}" class="dropdown-item">Settings</a>
               <a href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();" class="dropdown-item">Logout</a>
               <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                 @csrf
@@ -782,7 +780,7 @@ html [type=button] {
         <div class="navbar navbar-light">
           <div class="container-xl">
             <ul class="navbar-nav">
-              <li class="nav-item @if($active_module == 'home') active @endif">
+              <li class="nav-item">
                 <a class="nav-link" href="{{ url('admin/dashboard') }}" >
                   <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/home -->
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="5 12 3 12 12 3 21 12 19 12" /><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" /><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" /></svg>
@@ -792,13 +790,13 @@ html [type=button] {
                   </span>
                 </a>
               </li>
-              <li class="nav-item dropdown @if($active_module == 'Admins') active @endif">
-                <a class="nav-link " href="{{url('admin/users')}}">
+              <li class="nav-item dropdown">
+                <a class="nav-link " href="{{url('admin/blogs')}}">
                   <span class="nav-link-icon d-md-none d-lg-inline-block"><!-- Download SVG icon from http://tabler-icons.io/i/package -->
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3" /><line x1="12" y1="12" x2="20" y2="7.5" /><line x1="12" y1="12" x2="12" y2="21" /><line x1="12" y1="12" x2="4" y2="7.5" /><line x1="16" y1="5.25" x2="8" y2="9.75" /></svg>
                   </span>
                   <span class="nav-link-title">
-                    Admins
+                    Blogs
                   </span>
                 </a>
               </li>
@@ -835,11 +833,11 @@ html [type=button] {
                   <div class="edu-footer-widget">
                     <div class="logo">
                       <a href="{{ url('/') }}">
-                        <h2>Quiz</h2>
+                        <h2>Blogs</h2>
                       </a>
                     </div>
                     <p class="description" style="color: #181818 !important;line-height: 1.73;">
-                      KOI acknowledges the Gadigal people of the Eora Nation, the Boorooberongal people of the Dharug Nation, the Bidiagal people and the Gamaygal people, opon whose ancestral lands KOI stands. We would also like to pay respect to the elders both past and present, acknowledging them as the traditional custodians of the knowledge for these lands.
+                   
                     </p>
                   </div>
                 </div>
@@ -848,10 +846,7 @@ html [type=button] {
                     <h4 class="widget-title">Links</h4>
                     <div class="inner">
                       <ul class="footer-link link-hover">
-                        <li><a style="color:black; text-decoration:none;" href="#">Home</a></li>
-                        <li><a style="color:black; text-decoration:none;" href="#">Privacy-Policy</a></li>
-                        <li><a style="color:black; text-decoration:none;" href="#">Disclaimer</a></li>
-                        <li><a style="color:black; text-decoration:none;" href="#">Terms and Conditions</a></li>
+                        <li><a style="color:black; text-decoration:none;" href="{{url('/')}}">Home</a></li>
                       </ul>
                     </div>
                   </div>
