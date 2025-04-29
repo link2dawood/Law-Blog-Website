@@ -57,7 +57,7 @@ We use the expertise of our Council members and around 300 volunteer board and c
 
 					</div>
 				</div>
-				<div class="row">
+				<!-- <div class="row">
 					<article class="col-sm-4 col-xs-12 about-info">
 						<h2>Why Choose Us</h2>
 						<p>We’re the independent professional body for solicitors in England and Wales. We’re run by and for our members.</p>
@@ -71,7 +71,6 @@ We use the expertise of our Council members and around 300 volunteer board and c
 					</article>
 					<article class="col-sm-4 col-xs-12 about-info">
 						<h2>Our Services</h2>
-						<!-- accordian of the page -->
 						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 							<div class="panel panel-default">
 								<div class="panel-heading" role="tab" id="headingOne">
@@ -130,7 +129,6 @@ We use the expertise of our Council members and around 300 volunteer board and c
 					</article>
 					<article class="col-sm-4 col-xs-12 about-info">
 						<h2>Our Capabilities</h2>
-						<!-- progress-area of the page -->
 						<div class="progress-area">
 							<div class="progress-box">
 								<h3>Crime Cases</h3>
@@ -166,7 +164,7 @@ We use the expertise of our Council members and around 300 volunteer board and c
 							</div>
 						</div>
 					</article>
-				</div>
+				</div> -->
 			</div>
 
 		</main>
