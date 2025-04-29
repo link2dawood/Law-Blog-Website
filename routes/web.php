@@ -28,18 +28,7 @@ Route::get('/blogs', function () {
 Route::get('blogs/detail', function () {
     return view('blog-detail');
 });
-Route::get('/signin', function () {
-    return view('signin');
-});
-Route::get('/signup', function () {
-    return view('signup');
-});
-Route::get('/privacy-policy', function () {
-    return view('privacy-policy');
-});
-Route::get('/terms-and-conditions', function () {
-    return view('terms-and-conditions');
-});
+
 
 Auth::routes();
 
