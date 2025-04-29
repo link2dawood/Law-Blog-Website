@@ -29,6 +29,10 @@
 									<label for="title">Title</label>
 									<input type="text" class="form-control" id="title" value="" name="title" placeholder="Enter Title" required>
 								</div>
+                                <div class="form-group">
+									<label for="title">Video Link</label>
+									<input type="text" class="form-control" id="title22" value="" name="video_link" placeholder="Enter Video Link" >
+								</div>
 								<div class="form-group">
 									<label for="image">Image</label>
 									<input type="file" class="form-control" id="image" value="" name="image" placeholder="Enter Title" required>

@@ -29,6 +29,7 @@
 			<!-- news posts of the site -->
 			<div class="container news-posts">
 				<div class="row">
+
 					<div class="col-sm-12 col-md-12 col-xs-12" id="content">
                         @if(count($blogs) > 0)
                         @foreach($blogs as $val)
