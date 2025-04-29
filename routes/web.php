@@ -34,11 +34,6 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
-
 
 Route::get('/admin/blogs', [App\Http\Controllers\BlogController::class, 'index']);
 Route::get('/admin/blog/delete/{id?}', [App\Http\Controllers\BlogController::class, 'delete']);
