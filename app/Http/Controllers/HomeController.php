@@ -26,6 +26,16 @@ class HomeController extends Controller
     $blogs = Blog::latest()->get();
     return view('welcome', compact('blogs'));
     }
+    public function about()
+    {
+    return view('about');
+    }
+    public function contact()
+    {
+    return view('contact');
+    }
+
+
     public function blog_detail(Request $request, $id)
     {
     $blog = Blog::find($id);
@@ -42,5 +52,5 @@ class HomeController extends Controller
 
         return view('home');
     }
-    
+
 }

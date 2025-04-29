@@ -31,7 +31,9 @@
                                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                                 <li><a href="#"><i class="fa fa-rss"></i></a></li>
                             </ul>
-                            <a href="#" class="login">Login/Sign Up</a>
+                            @if(auth()->check())
+                            <a href="{{url('/admin/blogs')}}" class="login">Dashboard</a>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -40,8 +42,8 @@
                 <div class="row">
                     <div class="col-xs-12 holder">
                         <!-- logo of the page -->
-                        <div class="logo"><a href="#"><img src="{{ asset('assets/images/logo.png')}}" alt="LAW FIRM THEME FOR Law"></a></div>
-                        <a href="#" class="nav-opener visible-xs"><i class="fa fa-bars"></i></a>
+                        <div class="logo"><a href="{{url('/')}}"><img src="{{ asset('assets/images/logo.png')}}" alt="LAW FIRM THEME FOR Law"></a></div>
+                        <a href="{{url('/')}}" class="nav-opener visible-xs"><i class="fa fa-bars"></i></a>
                         <div class="nav-holder">
                             <a href="#" class="btn-search"><i class="fa fa-search"></i></a>
                             <form action="#" class="header-searchform">
@@ -53,13 +55,20 @@
                             <!-- nav of the page -->
                             <nav id="nav">
                                 <ul class="list-inline">
-                                    <li>
-                                        <a href="#wrapper" class="smoothanchor">Home</a>
+                                    <li class="{{ request()->url() == url('/') ? 'active' : '' }}">
+                                        <a href="{{ url('/') }}" class="smoothanchor">Home</a>
                                     </li>
-                                    <li><a href="#blog" class="smoothanchor">blog</a></li>
-                                    <li><a href="#aboutus" class="smoothanchor">About Us</a></li>
-                                    <li><a href="#contact" class="smoothanchor">Contact</a></li>
+                                    <li class="{{ request()->url() == url('/blogs') ? 'active' : '' }}">
+                                        <a href="{{ url('/blogs') }}" class="smoothanchor">Blog</a>
+                                    </li>
+                                    <li class="{{ request()->url() == url('/about') ? 'active' : '' }}">
+                                        <a href="{{ url('/about') }}" class="smoothanchor">About Us</a>
+                                    </li>
+                                    <li class="{{ request()->url() == url('/contact') ? 'active' : '' }}">
+                                        <a href="{{ url('/contact') }}" class="smoothanchor">Contact</a>
+                                    </li>
                                 </ul>
+
                             </nav>
                         </div>
                     </div>
@@ -79,10 +88,18 @@
                     </div>
                     <div class="col-sm-7 col-xs-12 copyrights">
                         <ul class="footer-nav list-inline">
-                            <li><a href="{{url('/')}}">Home</a></li>
-                            <li><a href="{{url('/about-us')}}">About Us</a></li>
-                            <li><a href="{{url('/blogs')}}">Blog</a></li>
-                            <li><a href="{{url('/contact-us')}}">Contact Us</a></li>
+                            <li class="{{ request()->url() == url('/') ? 'active' : '' }}">
+                                <a href="{{ url('/') }}" class="smoothanchor">Home</a>
+                            </li>
+                            <li class="{{ request()->url() == url('/blogs') ? 'active' : '' }}">
+                                <a href="{{ url('/blogs') }}" class="smoothanchor">Blog</a>
+                            </li>
+                            <li class="{{ request()->url() == url('/about') ? 'active' : '' }}">
+                                <a href="{{ url('/about') }}" class="smoothanchor">About Us</a>
+                            </li>
+                            <li class="{{ request()->url() == url('/contact') ? 'active' : '' }}">
+                                <a href="{{ url('/contact') }}" class="smoothanchor">Contact</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -145,7 +162,7 @@
                 draggable: false,
                 scrollwheel: false,
                 center: center,
-                styles: styles 
+                styles: styles
             };
             map = new google.maps.Map(document.getElementById('map'), settings);
 

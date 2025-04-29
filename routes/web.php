@@ -14,12 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
-Route::get('/contact', function () {
-    return view('contact');
+Route::get('/about', [App\Http\Controllers\HomeController::class, 'about']);
+Route::get('/contact', [App\Http\Controllers\HomeController::class, 'contact']);
+Route::post('/contact/message/store', [App\Http\Controllers\ContactMassageController::class, 'store']);
+
+Route::get('/admin', function () {
+    return redirect(url('/admin/blogs'));
 });
-Route::get('/about', function () {
-    return view('about');
+Route::get('/dashboard', function () {
+    return redirect(url('/admin/blogs'));
 });
+
+Route::get('admin/dashboard', function () {
+    return redirect(url('/admin/blogs'));
+});
+
 
 Route::get('/blog-detail/{id?}', [App\Http\Controllers\HomeController::class, 'blog_detail']);
 Route::get('/blogs', [App\Http\Controllers\HomeController::class, 'blogs']);
@@ -34,3 +43,6 @@ Route::post('/admin/blog/create', [App\Http\Controllers\BlogController::class, '
 Route::get('/admin/blog/update/{id?}', [App\Http\Controllers\BlogController::class, 'edit']);
 Route::post('/admin/blog/update/{id?}', [App\Http\Controllers\BlogController::class, 'edit']);
 Route::get('/admin/blog/delete/{id?}', [App\Http\Controllers\BlogController::class, 'delete']);
+
+Route::get('/admin/messages', [App\Http\Controllers\ContactMassageController::class, 'index']);
+Route::get('/admin/message/delete/{id}', [App\Http\Controllers\ContactMassageController::class, 'delete']);
