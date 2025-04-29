@@ -7,7 +7,7 @@
 				<i class="icon-arrow-right"></i>
 			</li>
 			<li class="nav-item">
-				<a href="{{url('blogs')}}">Blogs</a>
+				<a href="{{url('blogs')}}">Tutorial</a>
 			</li>
 			<li class="separator">
 				<i class="icon-arrow-right"></i>
@@ -20,7 +20,7 @@
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-header">
-						<div class="card-title">Blog Create</div>
+						<div class="card-title">Tutorial Create</div>
 					</div>
 					<div class="card-body">
 						<div class="row">

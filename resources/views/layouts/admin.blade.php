@@ -754,7 +754,7 @@ html [type=button] {
         </button>
         <h1 class="navbar-brand navbar-brand-autodark d-none-navbar-horizontal pe-0 pe-md-3">
           <a href="{{url('/home')}}">
-          Law Blogs
+          Tutorial
           </a>
         </h1>
         <div class="navbar-nav flex-row order-md-last">
@@ -796,7 +796,7 @@ html [type=button] {
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><polyline points="12 3 20 7.5 20 16.5 12 21 4 16.5 4 7.5 12 3" /><line x1="12" y1="12" x2="20" y2="7.5" /><line x1="12" y1="12" x2="12" y2="21" /><line x1="12" y1="12" x2="4" y2="7.5" /><line x1="16" y1="5.25" x2="8" y2="9.75" /></svg>
                   </span>
                   <span class="nav-link-title">
-                    Blogs
+                    Tutorials
                   </span>
                 </a>
               </li>
@@ -835,62 +835,7 @@ html [type=button] {
         </div>
         @yield('content')
 
-        <footer class="edu-footer bg-image footer-style-1 footer footer-transparent p-0">
-          <div class="footer-top">
-            <div class="container">
-              <div class="row g-5">
-                <div class="col-lg-5">
-                  <div class="edu-footer-widget">
-                    <div class="logo">
-                      <a href="{{ url('/') }}">
-                        <h2>Blogs</h2>
-                      </a>
-                    </div>
-                    <p class="description" style="color: #181818 !important;line-height: 1.73;">
-
-                    </p>
-                  </div>
-                </div>
-                <div class="col-lg-2 col-sm-6">
-                  <div class="edu-footer-widget quick-link-widget">
-                    <h4 class="widget-title">Links</h4>
-                    <div class="inner">
-                      <ul class="footer-link link-hover">
-                        <li><a style="color:black; text-decoration:none;" href="{{url('/')}}">Home</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-4">
-                  <div class="edu-footer-widget">
-                    <h4 class="widget-title">Contacts</h4>
-                    <div class="inner">
-                      <div class="widget-information">
-                        <ul class="information-list">
-                          <li style="text-decoration: none;"><span>Phone:</span>(02) 9283 3583</li>
-                          <li style="text-decoration: none;"><span>Email:</span>
-                            <a href="mailto:info@pulsetrainings.com" target="_blank" style="color:black; text-decoration:none;">ask@koi.edu.au</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="copyright-area" style="background-color: #ebeff0;">
-            <div class="container">
-              <div class="row">
-                <div class="col-lg-12">
-                  <div class="inner text-center">
-                    <p style="color:#000000 !important;">Copyright 2024 <a href="{{ url('/home') }}">Kings Own Institute</a>. All Rights Reserved</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </footer>
+      
       </div>
     </div>
     <script src="{{asset('admin-assets/dist/libs/apexcharts/dist/apexcharts.min.js')}}"></script>
