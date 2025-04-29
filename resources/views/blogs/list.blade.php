@@ -15,16 +15,23 @@
 					</tr>
 				</thead>
 				<tbody>
+					@if(count(@$blogs['data']) > 0)
+					@foreach ($blogs['data'] as $ind => $blog)
 					<tr>
-						<td >Maryjo Lebarree</td>
+						<td ><img src="{{url('/storage/app').'/'.$blog['image']}}" alt="blog image" style="width:60%;height:100px;"></td>
 						<td class="text-muted" >
-							Civil Engineer, Product Management
+							{{@$blog['title']}}
 						</td>
-						<td>
-							<a href="#">Edit</a> | 
-							<a href="#">Delete</a>
+						<td><a href="{{url('admin/blog/update/'.$blog['id'])}}" class="btn btn-warning">Edit</a>
+							<a href="{{url('admin/blog/delete/'.$blog['id'])}}" class="btn btn-danger">Delete</a>
 						</td>
 					</tr>
+					@endforeach
+					@else
+					<tr>
+						<td colspan="100%">No Data Found</td>
+					</tr>
+					@endif
 				</tbody>
 			</table>
 		</div>

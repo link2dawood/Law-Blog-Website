@@ -40,7 +40,7 @@
                 <div class="row">
                     <div class="col-xs-12 holder">
                         <!-- logo of the page -->
-                        <div class="logo"><a href="#"><img src="images/logo.png" alt="LAW FIRM THEME FOR Law"></a></div>
+                        <div class="logo"><a href="#"><img src="{{ asset('assets/images/logo.png')}}" alt="LAW FIRM THEME FOR Law"></a></div>
                         <a href="#" class="nav-opener visible-xs"><i class="fa fa-bars"></i></a>
                         <div class="nav-holder">
                             <a href="#" class="btn-search"><i class="fa fa-search"></i></a>
@@ -75,14 +75,14 @@
             <div class="container holder">
                 <div class="row">
                     <div class="col-sm-5 col-xs-12 copyrights">
-                        <p>&copy; Copyrights Reserved To <a href="www.htmlbeans.html">HTML BEANS</a>.</p>
+                        <p>&copy; Copyrights Reserved To <a href="#">GetGo</a>.</p>
                     </div>
                     <div class="col-sm-7 col-xs-12 copyrights">
                         <ul class="footer-nav list-inline">
-                            <li><a href="index-2.html">Home</a></li>
-                            <li><a href="aboutus.html">About Us</a></li>
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="team.html">Contact Us</a></li>
+                            <li><a href="{{url('/')}}">Home</a></li>
+                            <li><a href="{{url('/about-us')}}">About Us</a></li>
+                            <li><a href="{{url('/blogs')}}">Blog</a></li>
+                            <li><a href="{{url('/contact-us')}}">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>

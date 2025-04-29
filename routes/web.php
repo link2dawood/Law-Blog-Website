@@ -13,31 +13,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 Route::get('/contact', function () {
     return view('contact');
 });
 Route::get('/about', function () {
     return view('about');
 });
-Route::get('/blogs', function () {
-    return view('blogs');
-});
-Route::get('blogs/detail', function () {
-    return view('blog-detail');
-});
 
-
+Route::get('/blog-detail/{id?}', [App\Http\Controllers\HomeController::class, 'blog_detail']);
+Route::get('/blogs', [App\Http\Controllers\HomeController::class, 'blogs']);
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
 
 Route::get('/admin/blogs', [App\Http\Controllers\BlogController::class, 'index']);
-Route::get('/admin/blog/delete/{id?}', [App\Http\Controllers\BlogController::class, 'delete']);
 Route::get('/admin/blog/create', [App\Http\Controllers\BlogController::class, 'create']);
 Route::post('/admin/blog/create', [App\Http\Controllers\BlogController::class, 'create']);
-Route::get('/admin/blog/update/{id?}', [App\Http\Controllers\BlogController::class, 'update']);
-Route::post('/admin/blog/update/{id?}', [App\Http\Controllers\BlogController::class, 'update']);
+Route::get('/admin/blog/update/{id?}', [App\Http\Controllers\BlogController::class, 'edit']);
+Route::post('/admin/blog/update/{id?}', [App\Http\Controllers\BlogController::class, 'edit']);
+Route::get('/admin/blog/delete/{id?}', [App\Http\Controllers\BlogController::class, 'delete']);

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Blog;
 class HomeController extends Controller
 {
     /**
@@ -23,10 +23,24 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+    $blogs = Blog::latest()->get();
+    return view('welcome', compact('blogs'));
+    }
+    public function blog_detail(Request $request, $id)
+    {
+    $blog = Blog::find($id);
+    $latest = Blog::latest()->get();
+    return view('blog-detail', compact('blog', 'latest'));
     }
     public function blogs()
     {
-        return view('blogs');
+    $blogs = Blog::latest()->get();
+    return view('blogs', compact('blogs'));
     }
+    public function home()
+    {
+
+        return view('home');
+    }
+    
 }

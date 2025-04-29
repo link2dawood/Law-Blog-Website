@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Blog;
+use Storage;
 class BlogController extends Controller
 {
     private $type   =  "blogs";
@@ -57,7 +58,6 @@ class BlogController extends Controller
             "breadcrumbs"=>array("#"=>$this->plural." List"),
             "action"=> url('admin/'.$this->action),
             "module"=>['type'=>$this->type,'singular'=>$this->singular,'plural'=>$this->plural,'view'=>$this->view,'action'=>'admin/'.$this->action,'db_key'=>$this->db_key],
-            "active_module" => "course_categories"
         );
         /*
         GET RECORDS
@@ -112,10 +112,6 @@ class BlogController extends Controller
         if($request->isMethod('post')){
             $data = $request->all();
             $this->cleanData($data);
-            $data['created_by'] = \Auth::id();
-            if(empty($data['top'])){
-                $data['top'] = 0;
-            }
             //image 
             if ($request->hasFile('image')) {
                 $sfile=$request->file('image');
@@ -125,7 +121,7 @@ class BlogController extends Controller
             $CourseCategories         = new Blog;
             $CourseCategories->insert($data);
             $response = array('flag'=>true,'msg'=>$this->singular.' is added sucessfully.','action'=>'reload');
-            echo json_encode($response); return;
+            echo json_encode($response); return redirect(url('admin/blogs'));
         }
         $data   = array();
         $data   = array(
@@ -150,9 +146,6 @@ class BlogController extends Controller
         if($request->isMethod('post')){
             $data = $request->all();
             $this->cleanData($data);
-            if(empty($data['top'])){
-                $data['top'] = 0;
-            }
             //image 
             if ($request->hasFile('image')) {
                 $sfile=$request->file('image');
@@ -164,7 +157,7 @@ class BlogController extends Controller
             $CourseCategories->update($data);
             $response = array('flag'=>true,'msg'=>$this->singular.' is updated sucessfully.','action'=>'reload');
             echo json_encode($response); 
-            return;
+            return redirect(url('admin/blogs'));
         }
         // echo $id = $id; die;
         $data   = array(
@@ -174,7 +167,8 @@ class BlogController extends Controller
                     "action"=> url('admin/'.$this->action.'/edit/'.$id),
                     "module"=>['type'=>$this->type,'singular'=>$this->singular,'plural'=>$this->plural,'view'=>$this->view,'action'=>'admin/'.$this->action,'db_key'=>$this->db_key]
                 );        
-        $data['row']      = Blog::find($id)->get();
+        $data['row'] = Blog::find($id);
+        // dd($data);
         // echo "<pre>";print_r($data['row']);die;
         return view($this->view.'edit',$data);
     }
@@ -208,6 +202,6 @@ class BlogController extends Controller
         $item = Blog::find($id);
         $item->delete();
         $response = array('flag'=>true,'msg'=>$this->singular.' has been deleted.');
-        echo json_encode($response); return;
+        echo json_encode($response); return redirect(url('admin/blogs'));
     }
 }
