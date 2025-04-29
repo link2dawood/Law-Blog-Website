@@ -5,11 +5,11 @@
 				<div class="row">
 					<div class="col-xs-12 banner-box">
 						<header class="banner-heading">
-							<h1>Blogs</h1>
+							<h1>Tutorials</h1>
 							<nav class="breadcrumbs">
 								<ul class="list-inline">
 									<li><a href="{{url('/')}}">Home</a></li>
-									<li><a href="{{url('/blogs')}}">Blogs</a></li>
+									<li><a href="{{url('/blogs')}}">Tutorials</a></li>
 								</ul>
 							</nav>
 						</header>

@@ -78,7 +78,7 @@
 		<div class="row">
 			<div class="col-sm-9 col-xs-12 latest-news">
 				<header class="main-heading news">
-					<h2>Latest Tutorial</h2>
+					<h2>Latest Tutorials</h2>
 				</header>
 				@foreach($blogs as $val)
 				<div class="news-post">
@@ -167,7 +167,7 @@
 		<section class="col-sm-6 col-md-6 col-xs-12 column">
 			<h2>Tutorials</h2>
 			<p>We’re the independent professional body for solicitors in England and Wales. We’re run by and for our members.</p>
-			<a href="#" class="read-more">Read More »</a>
+			<a href="{{url('/blogs')}}" class="read-more">Read More »</a>
 			<h3>Email Newsletters:</h3>
 			<form action="#" class="email-form">
 				<div class="form-group">

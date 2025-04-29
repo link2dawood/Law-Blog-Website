@@ -11,8 +11,8 @@
 							<nav class="breadcrumbs">
 								<ul class="list-inline">
 									<li><a href="{{url('/')}}">Home</a></li>
-									<li><a href="{{url('/blogs')}}">Blogs</a></li>
-									<li><a href="#">Blog detail</a></li>
+									<li><a href="{{url('/blogs')}}">Tutorials</a></li>
+									<li><a href="#">Tutorial detail</a></li>
 								</ul>
 							</nav>
 						</header>
@@ -49,7 +49,7 @@
 								</a>
 							</div>
 							<ul class="post-nav list-inline">
-								<li><a href="#"><i class="fa fa-user"></i> Written by Adam</a></li>
+
 								<li><a href="#"><i class="fa fa-comment"></i> Law</a></li>
 							</ul>
 							<h2>{{$blog->title}}</h2>

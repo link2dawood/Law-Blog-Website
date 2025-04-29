@@ -59,7 +59,7 @@
                                         <a href="{{ url('/') }}" class="smoothanchor">Home</a>
                                     </li>
                                     <li class="{{ request()->url() == url('/blogs') ? 'active' : '' }}">
-                                        <a href="{{ url('/blogs') }}" class="smoothanchor">Blog</a>
+                                        <a href="{{ url('/blogs') }}" class="smoothanchor">Tutorials</a>
                                     </li>
                                     <li class="{{ request()->url() == url('/about') ? 'active' : '' }}">
                                         <a href="{{ url('/about') }}" class="smoothanchor">About Us</a>
@@ -92,7 +92,7 @@
                                 <a href="{{ url('/') }}" class="smoothanchor">Home</a>
                             </li>
                             <li class="{{ request()->url() == url('/blogs') ? 'active' : '' }}">
-                                <a href="{{ url('/blogs') }}" class="smoothanchor">Blog</a>
+                                <a href="{{ url('/blogs') }}" class="smoothanchor">Tutorials</a>
                             </li>
                             <li class="{{ request()->url() == url('/about') ? 'active' : '' }}">
                                 <a href="{{ url('/about') }}" class="smoothanchor">About Us</a>
