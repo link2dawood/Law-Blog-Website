@@ -48,249 +48,37 @@
 				<div class="img-box"></div>
 				<h2><a href="#">Litigation</a></h2>
 				<p>Fusce comodo eros quis molestie blandit. Aliquam sollicitudin maximus metus ac ullamcorper.</p>
-				<a href="#" class="btn btn-default">Read More +</a>
+
 			</div>
 			<div class="col-sm-3 col-xs-12 services-col approch">
 				<div class="img-box"></div>
 				<h2><a href="#">Approach</a></h2>
 				<p>Fusce comodo eros quis molestie blandit. Aliquam sollicitudin maximus metus ac ullamcorper.</p>
-				<a href="#" class="btn btn-default">Read More +</a>
+
 			</div>
 			<div class="col-sm-3 col-xs-12 services-col rules">
 				<div class="img-box"></div>
 				<h2><a href="#">Basic Rules</a></h2>
 				<p>Fusce comodo eros quis molestie blandit. Aliquam sollicitudin maximus metus ac ullamcorper.</p>
-				<a href="#" class="btn btn-default">Read More +</a>
+
 			</div>
 			<div class="col-sm-3 col-xs-12 services-col client">
 				<div class="img-box"></div>
 				<h2><a href="#">Private Client</a></h2>
 				<p>Fusce comodo eros quis molestie blandit. Aliquam sollicitudin maximus metus ac ullamcorper.</p>
-				<a href="#" class="btn btn-default">Read More +</a>
+
 			</div>
 		</div>
 	</section>
 	<!-- container block practice of the page -->
-	<section class="container container-block practice" id="practise">
-		<header class="row main-heading">
-			<div class="col-xs-12">
-				<h2>Practice Areas</h2>
-			</div>
-		</header>
-		<!-- practice-block of the page -->
-		<div class="row practice-block">
-			<div class="col-sm-4 col-xs-12 practice-col">
-				<a href="#">
-					<span data-picture data-alt="image description">
-						<span data-src="{{ asset('assets/images/img04-large.jpg')}}" data-width="368" data-height="279"></span>
-						<span data-src="{{ asset('assets/images/img04-large2x.jpg')}}" data-width="736" data-height="558" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span>
-						<noscript><img src="{{ asset('assets/images/img04-large.jpg')}}" width="368" height="279" alt="image description" ></noscript>
-					</span>
-					<h3>Trade mark Cases</h3>
-					<div class="over">
-						<div class="box">
-							<div class="block">
-								<div class="frame">
-									<strong class="title">Trade mark Cases</strong>
-									<p>Curabitur mollis neque vel ligula congue convallis id tristique</p>
-									<span class="btn-read">[+]</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-sm-4 col-xs-12 practice-col">
-				<a href="#">
-					<span data-picture data-alt="image description">
-						<span data-src="{{ asset('assets/images/img05-large.jpg')}}" data-width="368" data-height="279"></span>
-						<span data-src="{{ asset('assets/images/img05-large2x.jpg')}}" data-width="736" data-height="558" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span>
-						<noscript><img src="{{ asset('assets/images/img05-large.jpg')}}" width="368" height="279" alt="image description" ></noscript>
-					</span>
-					<h3>Crime Cases</h3>
-					<div class="over">
-						<div class="box">
-							<div class="block">
-								<div class="frame">
-									<strong class="title">Crime Cases</strong>
-									<p>Curabitur mollis neque vel ligula congue convallis id tristique</p>
-									<span class="btn-read">[+]</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-			<div class="col-sm-4 col-xs-12 practice-col">
-				<a href="#">
-					<span data-picture data-alt="image description">
-						<span data-src="{{ asset('assets/images/img06-large.jpg')}}" data-width="368" data-height="279"></span>
-						<span data-src="{{ asset('assets/images/img06-large2x.jpg')}}" data-width="736" data-height="558" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span>
-						<noscript><img src="{{ asset('assets/images/img06-large.jpg')}}" width="368" height="279" alt="image description" ></noscript>
-					</span>
-					<h3>Accidental Cases</h3>
-					<div class="over">
-						<div class="box">
-							<div class="block">
-								<div class="frame">
-									<strong class="title">Accidental Cases</strong>
-									<p>Curabitur mollis neque vel ligula congue convallis id tristique</p>
-									<span class="btn-read">[+]</span>
-								</div>
-							</div>
-						</div>
-					</div>
-				</a>
-			</div>
-		</div>
-	</section>
-	<!-- container block team of the page -->
-	<section class="container container-block team" id="team">
-		<div class="row">
-			<div class="col-xs-12">
-				<header class="main-heading">
-					<h2>Meet our Team</h2>
-				</header>
-			</div>
-		</div>
-		<!-- our-team of the Page -->
-		<div class="row our-team">
-			<article class="col-sm-3 col-xs-12 team-col">
-				<div class="img-box">
-					<a class="over" href="#">
-						<span data-picture data-alt="image description">
-							<span data-src="{{ asset('assets/images/img63-large.jpg')}}" data-width="268" data-height="218"></span>
-							<span data-src="{{ asset('assets/images/img63-large2x.jpg')}}" data-width="268" data-height="218" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span>
-							<noscript><img src="{{ asset('assets/images/img63-large.jpg')}}" width="268" height="218" alt="image description" ></noscript>
-						</span>
-						<span class="btn btn-default"><i class="fa fa-search"></i> View profile</span>
-					</a>
-				</div>
-				<ul class="divider-nav list-inline">
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
-				<div class="team-info">
-					<div class="team-title">
-						<h2><a href="#">Tim Bradley</a></h2>
-						<span class="designation">Lawyer</span>
-					</div>
-					<p>Duis quis odio molestie, eleifend lacus feugiat, convallis lorem. Cum sociis natoque penatibus et.</p>
-					<ul class="post-socials list-inline">
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-					</ul>
-				</div>
-			</article>
-			<article class="col-sm-3 col-xs-12 team-col">
-				<div class="img-box">
-					<a class="over" href="#">
-						<span data-picture data-alt="image description">
-							<span data-src="{{ asset('assets/images/img16-large.jpg')}}" data-width="268" data-height="218"></span>
-							<span data-src="{{ asset('assets/images/img16-large2x.jpg')}}" data-width="268" data-height="218" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span>
-							<noscript><img src="{{ asset('assets/images/img16-large.jpg')}}" width="268" height="218" alt="image description" ></noscript>
-						</span>
-						<span class="btn btn-default"><i class="fa fa-search"></i> View profile</span>
-					</a>
-				</div>
-				<ul class="divider-nav list-inline">
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
-				<div class="team-info">
-					<div class="team-title">
-						<h2><a href="#">Samanta Mitchel</a></h2>
-						<span class="designation">Lawyer</span>
-					</div>
-					<p>Duis quis odio molestie, eleifend lacus feugiat, convallis lorem. Cum sociis natoque penatibus et.</p>
-					<ul class="post-socials list-inline">
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-					</ul>
-				</div>
-			</article>
-			<article class="col-sm-3 col-xs-12 team-col">
-				<div class="img-box">
-					<a class="over" href="#">
-						<span data-picture data-alt="image description">
-							<span data-src="{{ asset('assets/images/img64-large.jpg')}}" data-width="268" data-height="218"></span>
-							<span data-src="{{ asset('assets/images/img64-large2x.jpg')}}" data-width="268" data-height="218" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span>
-							<noscript><img src="{{ asset('assets/images/img64-large.jpg')}}" width="268" height="218" alt="image description" ></noscript>
-						</span>
-						<span class="btn btn-default"><i class="fa fa-search"></i> View profile</span>
-					</a>
-				</div>
-				<ul class="divider-nav list-inline">
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
-				<div class="team-info">
-					<div class="team-title">
-						<h2><a href="#">Berry Wesley</a></h2>
-						<span class="designation">Lawyer</span>
-					</div>
-					<p>Duis quis odio molestie, eleifend lacus feugiat, convallis lorem. Cum sociis natoque penatibus et.</p>
-					<ul class="post-socials list-inline">
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-					</ul>
-				</div>
-			</article>
-			<article class="col-sm-3 col-xs-12 team-col">
-				<div class="img-box">
-					<a class="over" href="#">
-						<span data-picture data-alt="image description">
-							<span data-src="{{ asset('assets/images/img65-large.jpg')}}" data-width="268" data-height="218"></span>
-							<span data-src="{{ asset('assets/images/img65-large2x.jpg')}}" data-width="268" data-height="218" data-media="(-webkit-min-device-pixel-ratio:1.5), (min-resolution:1.5dppx)" ></span>
-							<noscript><img src="{{ asset('assets/images/img65-large.jpg')}}" width="268" height="218" alt="image description" ></noscript>
-						</span>
-						<span class="btn btn-default"><i class="fa fa-search"></i> View profile</span>
-					</a>
-				</div>
-				<ul class="divider-nav list-inline">
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-				</ul>
-				<div class="team-info">
-					<div class="team-title">
-						<h2><a href="#">Hulk Goover</a></h2>
-						<span class="designation">Lawyer</span>
-					</div>
-					<p>Duis quis odio molestie, eleifend lacus feugiat, convallis lorem. Cum sociis natoque penatibus et.</p>
-					<ul class="post-socials list-inline">
-						<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-						<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-						<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-						<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-					</ul>
-				</div>
-			</article>
-		</div>
-	</section>
+
+
 	<!-- news-block of the page -->
-	<section class="container container-block news-block" id="blog">
+	<section class="container container-block news-block" id="blog" style="padding-top:0!important;">
 		<div class="row">
 			<div class="col-sm-9 col-xs-12 latest-news">
 				<header class="main-heading news">
-					<h2>Latest blog</h2>
+					<h2>Latest Tutorial</h2>
 				</header>
 				@foreach($blogs as $val)
 				<div class="news-post">
@@ -377,7 +165,7 @@
 <div class="container footer-holder">
 	<aside class="row aside-block">
 		<section class="col-sm-6 col-md-6 col-xs-12 column">
-			<h2>Newsletters</h2>
+			<h2>Tutorials</h2>
 			<p>We’re the independent professional body for solicitors in England and Wales. We’re run by and for our members.</p>
 			<a href="#" class="read-more">Read More »</a>
 			<h3>Email Newsletters:</h3>

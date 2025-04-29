@@ -51,12 +51,13 @@
 								</a>
 							</div>
 							<ul class="post-nav list-inline">
-								<li><a href="#"><i class="fa fa-user"></i> Written by Adam</a></li>
-								<li><a href="#"><i class="fa fa-tag"></i> 10 Comments</a></li>
-								<li><a href="#"><i class="fa fa-comment"></i> Law</a></li>
+
+								<li><a href="{{url('/blog-detail', $val->id)}}"><i class="fa fa-tag"></i> Law</a></li>
+
 							</ul>
 							<h2>{{$val->title}}</h2>
-							<p>{!! $val->description !!}</p>
+							<p>{{ \Illuminate\Support\Str::limit(strip_tags($val->description), 250) }}</p>
+
 							<a href="{{url('/blog-detail', $val->id)}}" class="btn btn-default">Read More</a>
 						</article>
                         @endforeach
