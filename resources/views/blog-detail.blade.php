@@ -29,20 +29,23 @@
 			<div class="container news-posts">
 
 				<div class="row">
-                    @php
-                    // Extract video ID
-                    preg_match('/(?:v=|\/embed\/|\.be\/)([\w\-]+)/', $blog->video_link, $matches);
-                    $videoId = $matches[1] ?? null;
-                @endphp
+                 @php
+				    // Extract video ID
+				    preg_match('/(?:v=|\/embed\/|\.be\/)([\w\-]+)/', $blog->video_link, $matches);
+				    $videoId = $matches[1] ?? null;
+				@endphp
 
-                @if($videoId)
-                    <div class="video-thumbnail col-12" style="position: relative; width: 100%;margin-bottom: 20px;padding:0px 15px;">
-                        <a href="https://www.youtube.com/watch?v={{ $videoId }}" target="_blank">
-                            <img src="https://img.youtube.com/vi/{{ $videoId }}/hqdefault.jpg" style="width: 100%; height: auto;" alt="Video thumbnail">
-                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 40px; color: white;">▶</div>
-                        </a>
-                    </div>
-                @endif
+				@if($videoId)
+				    <div class="video-thumbnail col-12" style="position: relative; width: 100%; margin-bottom: 20px; padding: 0 15px;">
+				        <iframe width="100%" height="400" 
+				                src="https://www.youtube.com/embed/{{ $videoId }}" 
+				                title="YouTube video player" 
+				                frameborder="0" 
+				                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+				                allowfullscreen>
+				        </iframe>
+				    </div>
+				@endif
 
 
 
