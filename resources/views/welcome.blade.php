@@ -11,6 +11,429 @@
 		line-height: 2em; /* Make sure line-height is set */
 	}
 
+	a {
+   background-color: transparent;
+}
+a:active,
+a:hover {
+   outline: 0;
+}
+img {
+   border: 0;
+}
+input {
+   color: inherit;
+   font: inherit;
+   margin: 0;
+}
+input::-moz-focus-inner {
+   border: 0;
+   padding: 0;
+}
+input {
+   line-height: normal;
+}
+input[type="search"] {
+   -webkit-appearance: none;
+}
+
+img {
+   max-width: 100%;
+   vertical-align: middle;
+   display: inline-block;
+}
+.w-inline-block {
+   max-width: 100%;
+   display: inline-block;
+}
+.w-button {
+   display: inline-block;
+   padding: 9px 15px;
+   background-color: #3898ec;
+   color: white;
+   border: 0;
+   line-height: inherit;
+   text-decoration: none;
+   cursor: pointer;
+   border-radius: 0;
+}
+input.w-button {
+   -webkit-appearance: button;
+}
+h3 {
+   font-weight: bold;
+   margin-bottom: 10px;
+}
+h3 {
+   font-size: 24px;
+   line-height: 30px;
+   margin-top: 20px;
+}
+p {
+   margin-top: 0;
+   margin-bottom: 10px;
+}
+.w-form {
+   margin: 0 0 15px;
+}
+.w-form-done {
+   display: none;
+   padding: 20px;
+   text-align: center;
+   background-color: #dddddd;
+}
+.w-form-fail {
+   display: none;
+   margin-top: 10px;
+   padding: 10px;
+   background-color: #ffdede;
+}
+.w-input {
+   display: block;
+   width: 100%;
+   height: 38px;
+   padding: 8px 12px;
+   margin-bottom: 10px;
+   font-size: 14px;
+   line-height: 1.42857143;
+   color: #333333;
+   vertical-align: middle;
+   background-color: #ffffff;
+   border: 1px solid #cccccc;
+}
+.w-input:-moz-placeholder {
+   color: #999;
+}
+.w-input::-moz-placeholder {
+   color: #999;
+   opacity: 1;
+}
+.w-input:-ms-input-placeholder {
+   color: #999;
+}
+.w-input::-webkit-input-placeholder {
+   color: #999;
+}
+.w-input:focus {
+   border-color: #3898ec;
+   outline: 0;
+}
+.w-layout-grid {
+   display: -ms-grid;
+   display: grid;
+   grid-auto-columns: 1fr;
+   -ms-grid-columns: 1fr 1fr;
+   grid-template-columns: 1fr 1fr;
+   -ms-grid-rows: auto auto;
+   grid-template-rows: auto auto;
+   grid-row-gap: 16px;
+   grid-column-gap: 16px;
+}
+.blog-grid {
+   grid-column-gap: 40px;
+   -ms-grid-columns: 1fr 0.4fr;
+   grid-template-columns: 1fr 0.4fr;
+   -ms-grid-rows: auto;
+   grid-template-rows: auto;
+}
+.content-left {
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -webkit-flex-direction: column;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   -webkit-box-pack: start;
+   -webkit-justify-content: flex-start;
+   -ms-flex-pack: start;
+   justify-content: flex-start;
+   -webkit-box-align: center;
+   -webkit-align-items: center;
+   -ms-flex-align: center;
+   align-items: center;
+   grid-auto-columns: 1fr;
+   grid-column-gap: 16px;
+   grid-row-gap: 40px;
+   -ms-grid-columns: 1fr;
+   grid-template-columns: 1fr;
+   -ms-grid-rows: auto auto auto auto;
+   grid-template-rows: auto auto auto auto;
+}
+.content-right {
+   position: -webkit-sticky;
+   position: sticky;
+}
+.blog-item {
+   display: -ms-grid;
+   display: grid;
+   margin-bottom: 40px;
+   padding: 20px;
+   grid-auto-columns: 1fr;
+   grid-column-gap: 40px;
+   grid-row-gap: 16px;
+   -ms-grid-columns: 1fr 0.8fr;
+   grid-template-columns: 1fr 0.8fr;
+   -ms-grid-rows: auto;
+   grid-template-rows: auto;
+   border-radius: 15px;
+   background-color: #fff;
+   box-shadow: 0 22px 34px 0 rgba(0, 0, 0, 0.06);
+   text-decoration: none;
+}
+.blog-image {
+   width: 100%;
+}
+.blog-content {
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-orient: vertical;
+   -webkit-box-direction: normal;
+   -webkit-flex-direction: column;
+   -ms-flex-direction: column;
+   flex-direction: column;
+   -webkit-box-pack: center;
+   -webkit-justify-content: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   -webkit-box-align: start;
+   -webkit-align-items: flex-start;
+   -ms-flex-align: start;
+   align-items: flex-start;
+}
+.heading-h2 {
+   margin-top: 0px;
+   color: #202146;
+    font-size: 1.85rem;
+}
+.paragraph-detials-medium {
+   margin-bottom: 24px;
+   color: #9899ad;
+   font-size: 22px;
+   line-height: 24px;
+}
+.profile-block {
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-align: center;
+   -webkit-align-items: center;
+   -ms-flex-align: center;
+   align-items: center;
+}
+.profile-picture {
+   margin-right: 10px;
+   border-radius: 100px;
+}
+.title-small {
+   margin-bottom: 4px;
+   color: #202146;
+   font-weight: 700;
+}
+.title-small.pink {
+   margin-bottom: 0px;
+   color: #fb9acf;
+}
+.paragraph-detials-small {
+   margin-bottom: 0px;
+   color: #9899ad;
+   font-size: 14px;
+   line-height: 120%;
+}
+.seach-bar {
+   height: 60px;
+   margin-bottom: 40px;
+   padding-left: 20px;
+   border: 1px none #000;
+   border-radius: 15px;
+   box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.06);
+   color: #9899ad;
+   font-size: 15px;
+}
+.search-button {
+   position: static;
+   left: auto;
+   top: 0%;
+   right: 0%;
+   bottom: auto;
+   width: 60px;
+   height: 100%;
+   border-radius: 15px;
+   background-color: #5c4ebd;
+}
+.search {
+   position: relative;
+}
+.search-icon {
+   position: absolute;
+   left: 22px;
+   top: 22px;
+   right: 0%;
+   bottom: 0%;
+}
+.search-button-wrapper {
+   position: absolute;
+   left: auto;
+   top: 0%;
+   right: 0%;
+   bottom: auto;
+   height: 100%;
+}
+.subscription {
+   margin-bottom: 40px;
+   padding: 100px 20px 20px;
+   border-radius: 15px;
+   background-color: #fff;
+   background-image: url("https://assets.website-files.com/5ee1bccec7a1f843875ce9ea/5ee2076a9dc5318e60f2d65d_Paper%20Plane.png");
+   background-position: -20px -30px;
+   background-size: 125px;
+   background-repeat: no-repeat;
+   box-shadow: 0 12px 14px 0 rgba(0, 0, 0, 0.06);
+}
+.title-large {
+   margin-bottom: 20px;
+   color: #202146;
+   font-size: 20px;
+   line-height: 130%;
+   font-weight: 700;
+}
+.text-field {
+   height: 60px;
+   margin-bottom: 0px;
+   padding-top: 20px;
+   padding-bottom: 20px;
+   padding-left: 20px;
+   border: 1px none #000;
+   background-color: transparent;
+   font-size: 15px;
+}
+.featured-block {
+   margin-top: 10px;
+}
+.featured-item {
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   display: flex;
+   margin-bottom: 20px;
+   -webkit-box-align: center;
+   -webkit-align-items: center;
+   -ms-flex-align: center;
+   align-items: center;
+   -webkit-transition: color 200ms ease;
+   transition: color 200ms ease;
+   color: #202146;
+   text-decoration: none;
+}
+.featured-item:hover {
+   color: #5c4ebd;
+}
+.feature-image {
+   margin-right: 20px;
+   border-radius: 15px;
+   box-shadow: 0 22px 34px 0 rgba(0, 0, 0, 0.16);
+}
+.categories-block {
+   margin-top: 40px;
+}
+.categories-pill {
+   margin-right: 20px;
+   margin-bottom: 20px;
+   padding: 6px 16px;
+   border-radius: 100px;
+   background-color: #fff;
+   text-decoration: none;
+}
+.title-medium {
+   margin-bottom: 0px;
+   color: #5c4ebd;
+   font-size: 17px;
+   line-height: 130%;
+   font-weight: 700;
+   text-decoration: none;
+}
+.next-button {
+   margin-top: 20px;
+   padding: 20px 36px;
+   border-radius: 15px;
+   background-color: #fb9acf;
+   text-decoration: none;
+}
+.form {
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   display: flex;
+   border-radius: 15px;
+   background-color: #f2f5f8;
+}
+.submit-button {
+   width: 60px;
+   height: 60px;
+   background-color: transparent;
+}
+.submit-button-wrap {
+   position: relative;
+   display: -webkit-box;
+   display: -webkit-flex;
+   display: -ms-flexbox;
+   display: flex;
+   -webkit-box-pack: center;
+   -webkit-justify-content: center;
+   -ms-flex-pack: center;
+   justify-content: center;
+   -webkit-box-align: center;
+   -webkit-align-items: center;
+   -ms-flex-align: center;
+   align-items: center;
+}
+.image-2 {
+   position: absolute;
+}
+.blog-image-wrap {
+   overflow: hidden;
+   border-radius: 10px;
+}
+.stick-wrapper {
+   position: -webkit-sticky;
+   position: sticky;
+   top: 60px;
+}
+@media screen and (max-width: 991px) {
+   .blog-grid {
+      grid-column-gap: 22px;
+      -ms-grid-columns: 1fr 0.6fr;
+      grid-template-columns: 1fr 0.6fr;
+   }
+   .blog-item {
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+   }
+   .featured-item {
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+   }
+   .feature-image {
+      margin-bottom: 10px;
+   }
+}
+@media screen and (max-width: 767px) {
+   .blog-grid {
+      grid-row-gap: 62px;
+      -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+      -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+   }
+}
 
 </style>
 <div class="main-gallery beans-gallery">
@@ -76,6 +499,29 @@
 	<!-- news-block of the page -->
 	<section class="container container-block news-block" id="blog" style="padding-top:0!important;">
 		<div class="row">
+			<div class="w-layout-grid blog-grid">
+			   <div class="content-left">
+			      @foreach($blogs as $val)
+			      <a href="{{ url('/blog-detail', $val->id) }}" class="blog-item w-inline-block">
+			         <div class="blog-image-wrap">
+			            <img src="{{ url('/storage/app/' . $val->image) }}" width="380" alt="{{ $val->title }}" class="blog-image" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+			         </div>
+			         <div class="blog-content">
+			            <h3 class="heading-h2">{{ $val->title }}</h3>
+			            <p class="paragraph-detials-medium">{{ \Illuminate\Support\Str::limit(strip_tags($val->description), 250, '...') }}</p>
+			            <div class="profile-block">
+			               <img src="{{ asset('assets/images/default-profile.jpg') }}" width="50" alt="Author" class="profile-picture">
+			               <div class="normal-wrapper">
+			                  <div class="title-small">{{ $val->author ?? 'Admin' }}</div>
+			                  <p class="paragraph-detials-small">{{ \Carbon\Carbon::parse($val->created_at)->format('F d, Y') }}</p>
+			               </div>
+			            </div>
+			         </div>
+			      </a>
+			      @endforeach
+			   </div>
+			</div>
+
 			<div class="col-sm-9 col-xs-12 latest-news">
 				<header class="main-heading news">
 					<h2>Latest Tutorials</h2>
