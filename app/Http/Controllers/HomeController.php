@@ -23,8 +23,10 @@ class HomeController extends Controller
      */
     public function index()
     {
+    $latests = Blog::take(4)->get();
+    $virals = Blog::take(6)->get();
     $blogs = Blog::latest()->get();
-    return view('welcome', compact('blogs'));
+    return view('welcome', compact('blogs','latests','virals'));
     }
     public function about()
     {

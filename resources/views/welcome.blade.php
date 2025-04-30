@@ -1,6 +1,11 @@
 @extends('layouts.app')
 @section('content')
 <style type="text/css">
+
+.content-left a:hover{
+    text-decoration: none;
+}
+
 	.truncate-ckeditor {
 		display: -webkit-box;
 		-webkit-line-clamp: 3;
@@ -172,7 +177,7 @@ p {
    margin-bottom: 40px;
    padding: 20px;
    grid-auto-columns: 1fr;
-   grid-column-gap: 40px;
+   grid-column-gap:20px;
    grid-row-gap: 16px;
    -ms-grid-columns: 1fr 0.8fr;
    grid-template-columns: 1fr 0.8fr;
@@ -213,7 +218,7 @@ p {
 .paragraph-detials-medium {
    margin-bottom: 24px;
    color: #9899ad;
-   font-size: 22px;
+   font-size: 19px;
    line-height: 24px;
 }
 .profile-block {
@@ -435,6 +440,91 @@ p {
    }
 }
 
+/* New */
+.card-container {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  margin: auto;
+  box-shadow: 0 2px 20px rgba(0,0,0, 0.1);
+  overflow: hidden;
+}
+
+.card-image img {
+  height: 220px;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  background-size: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 16px;
+  min-height: 200px;
+}
+
+.card-badge {
+  text-transform: uppercase;
+  background-color: #fff;
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 70px;
+  margin: 0;
+  font-size: 12px;
+}
+
+.card-badge-blue {
+  background-color: #92d4e4;
+}
+
+.card-badge-purple {
+  background-color: #3d1d94;
+}
+
+.card-badge-pink {
+  background-color: #c62bcb;
+}
+
+.card-body h1 {
+  font-size: 16px;
+  margin: 8px 0;
+}
+
+.card-body p {
+  font-size: 14px;
+  margin: 8px 0 16px 0;
+}
+
+.card-author {
+  display: flex;
+  align-items: center;
+}
+
+.card-author p {
+  margin: 0 16px;
+  font-size: 12px;
+}
+
+.card-author p:last-child {
+  color: #888;
+}
+
+.card-author img {
+  border-radius: 50%;
+  height: 48px;
+  width: 48px;
+  margin-top: auto;
+}
+
+@media screen and (max-width: 1000px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
 </style>
 <div class="main-gallery beans-gallery">
 	<div class="beans-mask">
@@ -496,21 +586,64 @@ p {
 	<!-- container block practice of the page -->
 
 
+
 	<!-- news-block of the page -->
 	<section class="container container-block news-block" id="blog" style="padding-top:0!important;">
+
+        <header class="row main-heading">
+			<div class="col-xs-12">
+				<h2> Viral Tutorials</h2>
+			</div>
+		</header>
+        <div class="row">
+            @foreach ($virals as $val)
+            <div class="col-12 col-xs-12 col-sm-6 col-md-6 col-lg-4 col-xl-4" style="margin: 10px 0px;">
+               <div class="card-container">
+                   <div class="card-image">
+                     <img src="{{ url('/storage/app/' . $val->image) }}" alt="a brand new sports car" />
+                   </div>
+                   <div class="card-body">
+                     <span class="card-badge card-badge-blue">Viral</span>
+                     <h1>
+                        {{ \Illuminate\Support\Str::limit(strip_tags($val->title),20, '...') }}
+                     </h1>
+                     <p class="card-subtitle">
+                        {{ \Illuminate\Support\Str::limit(strip_tags($val->description),60, '...') }}
+                     </p>
+                     <div class="card-author">
+                       {{-- <img src="https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="author avatar" /> --}}
+                       <div class="author-info">
+                         <p class="author-name" style="margin-left: 0px;text-align:left;">{{ $val->author ?? 'Admin' }}</p>
+                         <p class="post-timestamp" style="margin-left: 0px;text-align:left;">{{ \Carbon\Carbon::parse($val->created_at)->format('F d, Y') }}</p>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
+            </div>
+            @endforeach
+        </div>
+
+
+
+        <header class="row main-heading" style="margin-top: 70px;">
+			<div class="col-xs-12">
+				<h2> Top Trading Tutorials</h2>
+			</div>
+		</header>
 		<div class="row">
-			<div class="w-layout-grid blog-grid">
+
+            @foreach($latests as $val)
+			<div class="col-sm-6 col-12 col-md-6 col-lg-6 col-xs-12 latest-news">
 			   <div class="content-left">
-			      @foreach($blogs as $val)
 			      <a href="{{ url('/blog-detail', $val->id) }}" class="blog-item w-inline-block">
 			         <div class="blog-image-wrap">
 			            <img src="{{ url('/storage/app/' . $val->image) }}" width="380" alt="{{ $val->title }}" class="blog-image" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
 			         </div>
 			         <div class="blog-content">
-			            <h3 class="heading-h2">{{ $val->title }}</h3>
-			            <p class="paragraph-detials-medium">{{ \Illuminate\Support\Str::limit(strip_tags($val->description), 250, '...') }}</p>
+			            <h3 class="heading-h2">{{ \Illuminate\Support\Str::limit(strip_tags($val->title),20, '...') }}</h3>
+			            <p class="paragraph-detials-medium">{{ \Illuminate\Support\Str::limit(strip_tags($val->description),60, '...') }}</p>
 			            <div class="profile-block">
-			               <img src="{{ asset('assets/images/default-profile.jpg') }}" width="50" alt="Author" class="profile-picture">
+
 			               <div class="normal-wrapper">
 			                  <div class="title-small">{{ $val->author ?? 'Admin' }}</div>
 			                  <p class="paragraph-detials-small">{{ \Carbon\Carbon::parse($val->created_at)->format('F d, Y') }}</p>
@@ -518,9 +651,9 @@ p {
 			            </div>
 			         </div>
 			      </a>
-			      @endforeach
-			   </div>
+                </div>
 			</div>
+            @endforeach
 
 			<div class="col-sm-9 col-xs-12 latest-news">
 				<header class="main-heading news">
