@@ -94,5 +94,128 @@ Its flexible structure and admin panel make it suitable for both technical and n
 ### Step 1: Clone the Project
 
 ```bash
-git clone https://github.com/your-username/laravel-tutorial-blog.git
-cd laravel-tutorial-blog
+git clone https://github.com/your-username/Law-Blog-Website.git
+cd Law-Blog-Website
+
+Step 2: Install PHP Dependencies
+
+composer install
+Step 3: Install Frontend Dependencies
+
+npm install
+npm run dev
+Step 4: Setup Environment File
+cp .env.example .env
+php artisan key:generate
+Step 5: Configure Database
+In .env file:
+DB_DATABASE=your_db
+DB_USERNAME=root
+DB_PASSWORD=your_password
+Then run:
+php artisan migrate
+Step 6: Start Development Server
+Run : 
+php artisan serve
+Visit: http://localhost:8000
+
+🧪 Testing
+1. Unit Testing
+Used Laravel’s built-in php artisan test command to test individual controllers and models.
+Run : 
+php artisan test
+2. Integration Testing
+Tested how models and views interact, ensuring smooth data flow.
+
+3. UI Testing
+Tested responsiveness using DevTools and checked on different browsers.
+
+Tested Pages:
+
+Home Page
+
+Single Tutorial Page
+
+Contact Form (email working)
+
+Admin Blog Creation (image + YouTube link upload)
+
+About Page
+
+🧾 Code Description
+routes/web.php — defines URL routes
+
+app/Http/Controllers/ — contains logic for:
+
+Displaying tutorials
+
+Handling contact form
+
+Admin CRUD operations
+
+resources/views/ — Blade files for:
+
+home.blade.php
+
+tutorials.blade.php
+
+single_tutorial.blade.php
+
+contact.blade.php
+
+admin/dashboard.blade.php
+
+app/Models/Tutorial.php — defines relationships and schema
+
+app/Mail/ContactFormMail.php — handles sending emails
+
+🔐 Admin Dashboard
+URL: http://localhost:8000/admin
+
+Secure login required
+
+Admin can:
+
+Add tutorials
+
+Upload images
+
+Paste YouTube links
+
+Add tutorial description
+
+🖼️ Screenshots
+📸 Replace with your actual images in the /images folder
+
+Home Page
+
+Admin Dashboard
+
+Add Tutorial
+
+Tutorial Page
+
+🚀 Deployment
+Set APP_ENV=production in .env
+
+Run:
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+Setup web server (Apache/Nginx)
+
+Ensure file permissions are set for storage and bootstrap/cache
+
+🧠 License
+This project is licensed under the MIT License.
+
+✉️ Contact
+For any issues, feel free to contact the developer or open an issue in the GitHub repository.
+
+---
+
+✅ **To use this:**
+
+1. Save this content as `README.md` at the root of your Laravel project.
+2. Create a folder named `images` and add your screenshots (like `homepage.png`, `admin-dashboard.png`, etc.).
+3. You can preview it on GitHub or Markdown viewers.
